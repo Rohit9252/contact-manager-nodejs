@@ -11,6 +11,7 @@ const valiadateToken = require('../middleware/validateTokenHandler');
 
 
 
+
 router.use(valiadateToken);
 router.route('/').get(getAllContact).post(createContact);
 router.route('/:id').get(getContact).put(updateContact).delete(deleteContact);
